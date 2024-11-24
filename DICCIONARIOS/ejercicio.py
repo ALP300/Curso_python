@@ -26,7 +26,7 @@ clientes={}
 opcion= ''
 while opcion!='6':
     if opcion=='1':
-        nif= input("Ingresa el NIF: ") #123
+        nif= input("Ingresa el NIF: ") 
         nombre= input("Ingresa tu nombre: ")
         direccion= input("Ingresa tu dirección: ")
         telefono= input("Ingresa tu teléfono: ")
@@ -51,5 +51,26 @@ while opcion!='6':
                 print(clave.title()+" : " , valor)
         else:
             print("No existe el cliente con el nif: ",nif)
-   
+            
+    if opcion=='4':
+       print("\nLista de todos los clientes:") 
+       for clave,valor in clientes.items(): 
+           print("Nombre: " , valor['nombre'])
+           
+    if opcion=='5':
+       print("\nLista de todos los clientes preferentes:") 
+       for clave,valor in clientes.items(): 
+           if valor['preferente']:
+                print(clave,valor['nombre'])
+    
+    opcion=input("Menú de opciones\n(1)AÑADIR CLIENTES\n(2) ELIMINAR CLIENTES\n(3) MOSTRAR CLIENTES\n(4) LISTAR CLIENTES\n(5) LISTAR PREFERENTES\n ELIGE UNA OPCIÓN: ")
+    
+                   
+    
+    
+    
+    
+       
+       
+      
     
